@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Red+Rose:wght@300;400;500;600;700&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Red Rose';
+}
+body{
+	height: 100%;
+	width: 100%;
+	background-color: rgb(44, 40, 40);
+	background-image: url('./main-bg.png');
+	background-size:cover;
+	background-attachment: fixed;
+	background-blend-mode:overlay ;
+}
+/* head section -> logo , nav-link , order-btn  */
+header{
+	padding: 30px 50px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	font-family: 'Red Rose';
+}
+#logo{
+	grid-column-end:1 ;
+	grid-column-end:2 ;
+
+	cursor: pointer;
+	width: 100px;
+}
+nav{
+	grid-column-end:2 ;
+	grid-column-end:3 ;
+
+	align-self: center;
+	justify-self: center;
+	display: flex;
+}
+.order{
+	grid-column-end: 3;
+	grid-column-end: 4;
+
+	height: fit-content;
+	justify-self: end;
+	align-self: center;
+}
+nav a{
+	padding: 10px 20px;
+	font-weight: 600;
+	font-size: 20px;
+	text-decoration: none;
+	color: gold;
+	letter-spacing: 1px;
+}
+.btn{
+	padding: 7px 15px;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	letter-spacing: 1px;
+	background-color: #e00857;
+	width: fit-content;
+	border: none;
+	cursor: pointer;
+}
+
+/* main section / hero section tagline & read-our-menu btn */
+main{
+	margin: 80px 50px 10px 50px;
+	height: 380px;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+.text{
+	color: gold;
+	font-family: 'Red Rose';
+	font-weight: 900;
+	font-size: 80px;
+	line-height: 90px;
+	text-transform: capitalize;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	letter-spacing: 1px;
+}
+#read-our-menu{
+	padding: 15px 25px;
+	margin-top: 15px;
+}
+
+/* hover effect on nav-link */
+nav a::after{
+	display: block;
+	content: '';
+	position: relative;
+	width: 100%;
+	height: 3px;
+	border-bottom: 3px solid #e00857;
+
+	transform: scale(0,1) ;
+	transition: transform 1s;
+	transition-timing-function: linear;
+} 
+nav a:hover::after{
+	transform: scale(1,1);
+}
+
+/* hover effect on both button */
+.btn:hover{
+	transform: scale(1.1);
+	transition: transform 0.5s;
+	transition-timing-function: linear;
+	box-shadow: 2px 2px 5px whitesmoke;
+	transition: box-shadow 1s;
+}
+
+.scroll img{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	height: 100px;
+	width: 100px;
+}
